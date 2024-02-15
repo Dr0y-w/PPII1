@@ -18,7 +18,7 @@ def get_distance(a,b):
         int:
             la distance en m entre les deux points
     """
-    key = "AIzaSyDqX66wgJN8ChCV2XZiWWKz0Uxo7SxgYMc"#clé de l'api
+    key = "une clé"#clé de l'api
     direct = d.Directions(api_key=key)#connexion au service d'itinéraire
 
     origin = a #l'adresse de départ
