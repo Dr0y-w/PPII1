@@ -1,20 +1,15 @@
 # PPII «Projet Pluridisciplinaire d'Informatique Intégrative» (2022-2023)
 
-Olivier Festor <<olivier.festor@telecomnancy.eu>>  
-Anne-Claure Heurtel <<anne-claire.heurtel@telecomnancy.eu>>
-Gérald Oster <<gerald.oster@telecomnancy.eu>>  
-
-
 ## PotaG - Le social en circuit court
 <!-- LOGO DU PROJET -->
 
 <img src="Web/PotaG_logo.png" width=20% height=20%>
 
 **Membres du groupe** :
-- Thomas Gianelli <<thomas.gianelli@telecomnancy.eu>>
-- Maxence Bekhedda <<maxence.bekhedda@telecomnancy.eu>>
-- Léo Germain <<Leo.Germain@telecomnancy.eu>>
-- Théo Walter <<theo.walter@telecomnancy.eu>>
+- Thomas Gianelli <<thomas.gianelli@telecomnancy.eu>>  
+- Maxence Bekhedda <<maxence.bekhedda@telecomnancy.eu>>  
+- Léo Germain <<Leo.Germain@telecomnancy.eu>>  
+- Théo Walter <<theo.walter@telecomnancy.eu>>  
 
 ## Description du projet
 
