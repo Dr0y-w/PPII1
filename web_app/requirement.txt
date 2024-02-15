@@ -1,0 +1,5 @@
+Flask==2.2.2
+gmaps==0.9.0
+matplotlib==3.6.2
+python_gmaps==0.3.1
+
