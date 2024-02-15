@@ -1,0 +1,68 @@
+{%extends "layout/base.html"%}
+{%block title%} VisitProfile {%endblock%}
+
+{%block head%}
+
+<link rel="stylesheet" href="static/css/publications.css">
+
+{%endblock%}
+
+{%block content%}
+
+<div class="bandeau">
+
+    <div class="photo_profil">
+        <img src="{{compte_visite[3]}}">
+    </div>
+    
+    <div class=identite>
+        <div class="nom">
+            {{compte_visite[1]}} {{compte_visite[0]}}
+        </div>
+
+        <div class="username">
+            @{{compte_visite[2]}}
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="publication">
+            Publications: {{compte_visite[6]}}
+        </div>
+        <div class="followers">
+            Followers: {{compte_visite[7]}}
+        </div>
+        <div class="suivie">
+            Suivi(e)s: {{compte_visite[8]}}
+        </div>
+        <div class="post_liked">
+            Publications likées: {{nb_posts_like}}
+        </div>
+    </div>
+
+    <div class="suivi">
+        <form action="/visitprofile{{compte_visite[2]}}" method="POST">
+            <button type="submit">{{button_value}}</button>
+        </form>
+    </div>
+</div>
+<div id="contentbis">
+{%for post in posts%}
+        <div id="publication">
+
+            <div class="photo">
+                <img src="{{post[1]}}" alt="">
+            </div>
+
+            <div class="bio">
+                {{post[2]}}
+            </div>
+
+            <div class="date">
+                {{post[3]}}
+            </div>
+        </div>
+    {%endfor%}
+</div>
+
+{%endblock%}

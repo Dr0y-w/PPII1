@@ -1,0 +1,43 @@
+{%extends "layout/base.html"%}
+{%block head%} <link rel="stylesheet" href="{{url_for('static',filename='css/parametres.css')}}">{%endblock%}
+{%block title%} Paramètres {%endblock%}
+{%block content%}
+ <div class="text">Paramètres</div>
+    <div class="categorie">
+        <h2 class="titre_categorie">Photo de profil</h2>
+        <div class="une_option">
+            <a class="redirection" href="/profilepicture">Changer de photo de profil</a>
+        </div>
+    </div>
+    <div class="categorie">
+        <h2 class="titre_categorie">Adresse {% if error %} ! {{ error }}{% endif %}</h2>
+
+        <div class="une_option">
+
+            Mon Adresse: {{compte[4]}}, {{compte[5]}}
+        </div>
+        <div class="une_option">
+            <a href="changeadress">Modifier mon adresse</a>
+        </div>
+    </div>
+    <div class="categorie">
+        <h2 class="titre_categorie">Sécurité</h2>
+        <div class="une_option">
+            <div>
+                <a href="/changepassword">Changer mon mot de passe </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="categorie">
+        <h2 class="titre_categorie">Mes Données</h2>
+        <div class="une_option">
+            <di>
+                <a href="/deleteaccount"> Supprimer mon compte </a>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

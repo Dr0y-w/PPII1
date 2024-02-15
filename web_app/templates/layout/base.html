@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/base.css')}}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    {%block head%}{%endblock%}
+    <title>{%block title%}{%endblock%}</title>
+   </head>
+<body>
+  <div class="sidebar">
+
+    <div class="logo-details">
+        <div class="logo_name">Pota</div>
+        <div class="logo_name" style="color:#55835d">G</div>
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+      
+    <div class="profil">
+        <div class="picture">
+            <a href="/profilepicture">
+            <img src="{{compte[3]}}" class="profil_img">
+            <div class="middle">
+              <div class="text">Modifier</div>
+            </div>
+            </a>
+        </div>
+        <div class="display_name">
+            {{compte[1]}} {{compte[0]}}
+        </div>
+        <div class="user_name">
+            @{{compte[2]}}
+        </div>
+        <div class="profil_stat">
+            <div>
+                <div class="nbr">
+                  <a href="/profil">{{compte[6]}}
+                    <br>
+                    publications</a>
+                </div>
+              
+            </div>
+            <div>
+                <div class="nbr">
+                  <a href="/followers"> {{compte[7]}}
+                    <br>
+                    followers</a>
+                </div>
+              
+            </div>
+            <div>
+                <div class="nbr">
+                  <a href="/profilsfollowed">{{compte[8]}}
+                   <br>
+                   suivi(e)s</a>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <ul class="nav-list">
+      <li>
+        <i class='bx bx-search' id="search" ></i>
+        <form action="/search"  method="POST">
+          <input type="text" name="recherche" placeholder="Rechercher...">
+          <input type="submit" name="Search" style="display: none;">
+        </form>
+       <span class="tooltip">Rechercher</span>
+    </li>
+      <li>
+        <a href="publications">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Publications</span>
+        </a>
+         <span class="tooltip">Publications</span>
+      </li>
+      <li>
+       <a href="profil">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Profil</span>
+       </a>
+       <span class="tooltip">Profil</span>
+     </li>
+     <li>
+       <a href="ventes">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Vente</span>
+       </a>
+       <span class="tooltip">Vente</span>
+     </li>
+     <li>
+       <a href="lockers">
+         <i class='bx bx-package' ></i>
+         <span class="links_name">Casiers</span>
+       </a>
+       <span class="tooltip">Casiers</span>
+     </li>
+     <li>
+       <a href="parametres">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Paramètres</span>
+       </a>
+       <span class="tooltip">Paramètres</span>
+     </li>
+     <li class="profile">
+      <a href="logout">
+      <i class='bx bx-log-out' id="log_out" ></i>
+      <span href="logout" class="links_name">Déconnexion</span>
+      </a>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    {%block content%}{%endblock content%}
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector("#search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+  });
+
+
+  
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "layout/base_login.html" %}
+
+{% block head %}
+
+<title>Ajouter un article</title>
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/login.css') }}">
+
+{% endblock %}
+
+{% block body %}
+      <div class="wrapper">
+         <div class="title">
+            Vente
+         </div>
+
+          {% if error %}
+	        <p class=error><strong>Erreur:</strong> {{ error }}
+          {% endif %}
+
+         <form action="/addventes" enctype="multipart/form-data" method="POST">
+
+            <div class="section choixphoto">
+               <label for="avatar">Choisir une image</label>
+                <input type="file" id="avatar" name="file" accept="image/png image/jpeg" >
+             </div>
+
+            <div class="field">
+               <textarea cols="32" rows="2" name="description" required placeholder="Ajouter un commentaire"></textarea>
+               <!--<label>Ajouter un commentaire</label>-->
+            </div>
+            <div class="field">
+               <textarea cols="32" rows="2" name="prix" required placeholder="Prix"></textarea>
+               <!--<label>Ajouter un commentaire</label>-->
+            </div>
+
+
+            <div class="field">
+               <input type="submit" name="Register" value="Publier">
+            </div>
+      
+
+         </form>
+      </div>
+{% endblock %}

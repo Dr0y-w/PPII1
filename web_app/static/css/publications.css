@@ -1,0 +1,263 @@
+.bandeau{
+    margin: 0px 2px 0px 2px;
+    display: flex;
+    background-color: rgb(60, 109, 60);
+    color: white;  
+    align-items: center;
+}
+
+.bandeau .photo_profil img{
+    margin: 15px;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 2vw;
+    object-fit: cover;
+}
+
+.bandeau .identite{
+    margin: 15px;
+    font-size: 25px;
+}
+
+.bandeau .stats{
+    margin: auto 50px auto 50px;
+    font-size: 20px;
+}
+
+#contentbis{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+#publication{
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(71, 90, 73);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 400px;
+    margin: 5px;
+    background-color: rgba(0, 131, 15, 0.047);
+}
+
+.entete{
+    display: flex;
+    margin: 5px 5px 0px 5px;
+    align-items:center ;
+    justify-content: left;
+}
+
+.pp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.pp{
+    width: 4vw;
+}
+
+.entete .username a{
+    position: relative;
+    top: -8px;
+    left: -5px;
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.entete .username a:hover{
+    font-weight: 650;
+}
+
+.date{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.identite .username{
+    margin: 3.2% 0;
+    font-size: 20px;
+}
+
+.ligne{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: black;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.ligne .photo{
+    margin: 0;
+    width: 100px;
+}
+
+.ligne .photo img{
+    margin: 5px 0 0 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.ligne .username{
+    width: 200px;
+    margin: 0;
+}
+
+.like_button_false form{
+    width: 0;
+    height: 0;
+}
+
+.like_button_false button{
+    color: #ceffc649;
+    position: relative;
+    bottom: 70px;
+    left: 340px;
+    font-size: 50px;
+    background: none;
+    align-content: end;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+
+.like_button_false button:hover{
+    color: rgb(255, 0, 51);
+}
+
+.like_button_true form{
+    width: 0;
+    height: 0;
+}
+
+.like_button_true button{
+    color: rgb(255, 0, 51);
+    position: relative;
+    bottom: 70px;
+    left: 340px;
+    font-size: 50px;
+    background: none;
+    align-content: end;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+
+.like_button_true button:hover{
+    color: #ceffc649;
+}
+
+.photo img{
+    width: 387px; 
+    height: 400px;
+    object-fit: cover;
+}
+
+.plus_button button{
+    position: fixed;
+    bottom: 15px;
+    left: 85px;
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 70vw;
+    background-color: rgb(60, 109, 60);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 10px 10px;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+
+.plus_button button:hover{
+    background-color: white;
+    color: rgb(60, 109, 60);
+  }
+
+.suivi button{
+    border: none;
+    background-color: #55835d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s; 
+}
+
+.suivi button:hover{
+    background-color: white;
+    color: rgb(60, 109, 60);
+  }
+
+.ligne .annulation button{
+    margin: 0 0 0 30px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(60, 109, 60);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.ligne .annulation button:hover{
+    color: rgb(60, 109, 60);
+    background-color: rgba(60, 109, 60, 0.196);
+}
+
+  a:link {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+
+  .stats a:link{
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .stats a:visited {
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .stats a:link:hover{
+    color: orange !important;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .stats a:visited:hover {
+    color: orange !important;
+    text-align: center;
+    text-decoration: none;
+  }
+

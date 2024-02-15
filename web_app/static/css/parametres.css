@@ -1,0 +1,51 @@
+:root{
+    --box-color:rgb(242,242,242)
+}
+
+
+.content{
+    display:flex;
+    flex-direction: column;
+}
+.categorie{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--box-color);
+    border-radius: 1vh;
+    margin:3vh;
+    padding:1vh
+}
+.titre_categorie{
+    margin-left:1vh;
+}
+.une_option{
+    margin-left:2vh;
+    margin-top:2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right:40vh;
+}
+input[type="radio"] {
+    display: none;
+}
+input:checked + label{
+    background-color: rgb(87, 148, 87);
+    border-radius: 1vh;
+    padding:0.5vh;
+}
+
+a:link {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:hover{
+    font-weight: 600;
+    text-decoration: none;
+  }

@@ -1,0 +1,80 @@
+{% extends "layout/base_login.html" %}
+
+{% block head %}
+
+<title>PotaG - Signup</title>
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/login.css') }}">
+
+{% endblock %}
+
+{% block body %}
+  {% if error %}
+    <p class=error><strong>Erreur:</strong> {{ error }}
+  {% endif %}
+
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            PotaG - Inscription
+         </div>
+
+          {% if error %}
+	        <p class=error><strong>Erreur:</strong> {{ error }}
+          {% endif %}
+
+         <form action="/signup" method="POST">
+
+
+            <div class="field">
+               <input type="text" name="ln" required>
+               <label>Nom</label>
+            </div>
+
+            <div class="field">
+               <input type="text" name="fn" required>
+               <label>Prénom</label>
+            </div>
+
+            <div class="field">
+              <input type="text" name="un" required>
+              <label>Nom d'utilisateur</label>
+            </div>
+
+            <div class="field">
+               <input type="text" name="mail" required>
+               <label>Adresse Mail</label>
+            </div>
+
+
+            <div class="type-box">
+              <h3>Type de compte</h3>
+              <div class="type-option">
+                <div class="type">
+                  <input type="radio" id="acheteur" name="compte" value="acheteur"checked />
+                  <label for="acheteur">Acheteur</label>
+                </div>
+                <div class="type">
+                  <input type="radio" id="producteur" name="compte" value="producteur"/>
+                  <label for="producteur">Producteur</label>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="field">
+               <input type="submit" name="Register" value="Valider">
+            </div>
+
+            <div class="signup-link">
+               Déjà un compte? <a class="redirection" href="/login"> Connectez-vous </a>!
+            </div>
+
+
+         </form>
+      </div>
+   </body>
+
+
+{% endblock %}

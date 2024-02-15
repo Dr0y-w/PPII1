@@ -1,0 +1,26 @@
+{%extends "layout/base.html"%}
+{%block title%} Followers {%endblock%}
+
+{%block head%}
+
+<link rel="stylesheet" href="static/css/publications.css">
+
+{%endblock%}
+
+{%block content%}
+
+{%for user in followers%}
+    <div class="ligne">
+        <div class="photo">
+            <img src="{{user[1]}}">
+        </div>
+        <div class="username">
+            <a href="/visitprofile{{user[0]}}">{{user[0]}}</a>
+        </div>
+        <div class="nb_publications">
+            publications: {{user[2]}}
+        </div>
+    </div>
+{%endfor%}
+
+{%endblock%}

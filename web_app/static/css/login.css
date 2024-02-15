@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background : url(../images/back_carrot2.jpg) no-repeat center; 
+}
+
+::selection{
+  background: #6e3300;
+  color: #fff;
+}
+
+.wrapper{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: #3d5a38;
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+  align-items: center;
+}
+
+.wrapper .photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .profil_img{
+  display: flex;
+  object-fit: cover;
+  margin-top: 1vh;
+  border-radius:12px;
+  width:9vw;
+  height: 9vw;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #55835d;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #55835d;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  float: left;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: #55835d;
+}
+
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #3d5a38;
+  transition: all 0.3s ease;
+}
+
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #096a09;
+  text-decoration: none;
+}
+form .pass-link a:hover
+
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.form .type-box {
+  margin-top: 20px;
+}
+.type-box h3 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.type-option, .type) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .type {
+  column-gap: 5px;
+}
+.type input {
+  accent-color: #096a09;
+}
+.form :where(.type input, .type label) {
+  cursor: pointer;
+}
+.type label {
+  color: #707070;}
+
+textarea{
+  padding: 5px;
+  box-sizing: border-box;
+  width: 320px;
+  resize: none;
+}
+
+.choixpp ,
+.choixphoto{
+  margin: 10px
+}
+.section.choixpp label,
+.section.choixphoto label{
+    margin: 0 0 0 67px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(60, 109, 60);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.section.choixpp label:hover,
+.section.choixphoto label:hover{
+    color: rgb(60, 109, 60);
+    background-color: rgba(60, 109, 60, 0.196);
+}
+
+.choixpp ::-webkit-file-upload-button,
+.choixphoto ::-webkit-file-upload-button{
+  border: none;
+  opacity: 0;
+}
+
+.choixpp input,
+.choixphoto input{
+  position: relative;
+  top: 15px;
+  right: 30px;
+}

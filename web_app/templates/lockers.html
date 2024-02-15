@@ -1,0 +1,43 @@
+{% extends "layout/base.html" %}
+{%block head%}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/lockers.css')}}" />
+
+{%endblock%}
+
+{%block content%}
+    <div class="titre">
+        <h1>Nos casiers</h1>
+    </div>
+    <div id="gmap">
+        <script type="module">
+        window.initMap = initMap;
+        function initMap() {
+        
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 48.68, lng: 6.18},
+            zoom: 13,
+            //gmap centré sur nancy dans la div d'id map
+        });
+        {%for e in adresses%}
+        var myLatLng = { lat:{{e["lat"]}},lng:{{e["lng"]}} } ;
+        //coordonée d'un locker
+        new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "casier",
+        });
+        //creation d'un marker
+        {%endfor%}
+        }
+        window.initMap = initMap;</script>
+        <div id="map"></div>
+        <script
+        //request avec la key à l'api gmap
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqX66wgJN8ChCV2XZiWWKz0Uxo7SxgYMc&callback=initMap&v=weekly"
+        defer
+        ></script>
+    </div>
+    
+{%endblock%}
+

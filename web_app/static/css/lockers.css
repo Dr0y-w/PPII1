@@ -1,0 +1,16 @@
+:root{
+  --box-color:rgb(242,242,242)
+}
+
+#map {
+    height: 85vh;
+    margin:2vw;
+  }
+  
+.titre{
+  background-color: var(--box-color);
+  border-radius: 1vh;
+  margin:3vh;
+  margin-top:0px;
+  padding:1vh;
+}

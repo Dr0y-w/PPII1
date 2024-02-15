@@ -1,0 +1,45 @@
+{% extends "layout/base_login.html" %}
+
+{% block head %}
+
+<title>Enter you Adress</title>
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/login.css') }}">
+
+
+{% endblock %}
+
+
+{% block body %}
+
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Adresse
+         </div>
+
+          {% if error %}
+	        <p class=error><strong>Erreur:</strong> {{ error }}
+          {% endif %}
+
+         <form action="/changeadress" method="POST">
+
+
+            <div class="field">
+               <input id="adresse" name="adresse" type="text" required>
+               <label>Adresse</label>
+            </div>
+                     
+            <div class="field">
+              <input id="ville" name="ville" type="text" required>
+              <label>Ville</label>
+            </div>
+
+            <div class="field">
+               <input type="submit" name="connection" value="Valider">
+            </div>
+         </form>
+      </div>
+   </body>
+
+
+{% endblock %}

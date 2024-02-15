@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="initial-scale=1, width=device-width" charset="utf8">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='images/icone.ico') }}">
+		<script src="/static/script/script.js"></script>
+		{% block head %}{% endblock %}
+		
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
+</html>

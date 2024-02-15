@@ -1,0 +1,29 @@
+{% extends "layout/base_login.html" %}
+
+{% block head %}
+
+<title>PotaG - Connexion</title>
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/login.css') }}">
+
+{% endblock %}
+
+{% block body %}
+      <div class="wrapper">
+         <div class="title">
+            PotaG - Oups
+         </div>
+         <form>
+          {% if error %}
+	        <p class=error><strong>Erreur:</strong> {{ error }}
+          {% endif %}
+          
+            <div class="content">
+               Il va falloir recréer un compte.. 
+               <a class="redirection" href="/signup"> Désolé </a>!
+            </div>
+            <div class="content">
+               <a class="redirection" href="/login"> Retour </a>
+            </div>
+      </form>
+      </div>
+{% endblock %}

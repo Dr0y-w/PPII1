@@ -1,0 +1,77 @@
+{%extends "layout/base.html"%}
+{%block title%} Profil {%endblock%}
+
+{%block head%}
+
+<link rel="stylesheet" href="static/css/publications.css">
+
+{%endblock%}
+
+{%block content%}
+
+<div class="bandeau">
+
+    <div class="photo_profil">
+        <img src="{{compte[3]}}">
+    </div>
+    
+    <div class=identite>
+        <div class="nom">
+            {{compte[1]}} {{compte[0]}}
+        </div>
+
+        <div class="username">
+            @{{compte[2]}}
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="publication">
+            Publications: {{compte[6]}}
+        </div>
+        <div class="followers">
+            <a href="/followers">Followers: {{compte[7]}}</a>
+        </div>
+        <div class="suivie">
+            <a href="/profilsfollowed">Suivi(e)s: {{compte[8]}}</a>
+        </div>
+        <div class="post_liked">
+            <a href="/publicationliked">Publications likées: {{nb_posts_like}}</a>
+        </div>
+    </div>
+</div>
+<div id="contentbis">
+{%for post in posts%}
+        <div id="publication">
+
+            <div class="photo">
+                <img src="{{post[1]}}" alt="">
+            </div>
+
+            <div class="like_button_true">
+                <form action="/deletepost" method="POST">
+                    <input type="hidden" name="idpost" value={{post[5]}} >
+                    <button type='submit'>
+                        <i class='bx bx-trash'></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="bio">
+                {{post[2]}}
+            </div>
+
+            <div class="date">
+                {{post[3]}}
+            </div>
+        </div>
+    {%endfor%}
+</div>
+
+<div class="plus_button">
+    <form action="/profil" method="POST">
+        <button type='submit'>+</button>
+    </form>
+</div>
+
+{%endblock%}

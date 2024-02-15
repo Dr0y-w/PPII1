@@ -1,0 +1,42 @@
+{% extends "layout/base_login.html" %}
+
+{% block head %}
+
+<title>Photo de profil</title>
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/login.css') }}">
+
+
+{% endblock %}
+
+{% block body %}
+      <div class="wrapper">
+         <div class="title">
+            Photo de Profil
+         </div>
+
+          {% if error %}
+	        <p class=error><strong>Erreur:</strong> {{ error }}
+          {% endif %}
+
+         <form action="/profilepicture" enctype="multipart/form-data" method="POST">
+
+            <div class="photo">
+                <img src="{{compte[3]}}" class="profil_img">
+            </div>
+            <div class="section choixpp">
+               <label for="avatar">Choisir un fichier</label>
+               <input type="file" id="avatar" name="file" accept="image/png image/jpeg" >
+            </div>
+
+            <div class="content">
+               Veuillez choisir une photo de profil
+            </div>
+
+            <div class="field">
+                <input type="submit" value="Envoyer">
+            </div>
+
+         </form>
+      </div>
+
+{%endblock%}
